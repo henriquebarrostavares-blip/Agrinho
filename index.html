@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNO Agro Sustentável - Agrinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <div class="logo">AGRO <span>UNO</span></div>
+            <p id="game-status">Sua vez! Jogue uma carta verde ou com o mesmo ícone.</p>
+        </header>
+
+        <div id="opponent-hand" class="hand"></div>
+
+        <div id="table-center">
+            <div id="deck" class="card-back">
+                <div class="deck-info">COMPRAR</div>
+            </div>
+            <div id="discard-pile">
+                </div>
+        </div>
+
+        <div id="player-hand" class="hand"></div>
+
+        <div class="controls">
+            <button id="draw-btn" class="btn">Comprar Carta</button>
+            <button id="uno-btn" class="btn">UNO!</button>
+        </div>
+
+        <div class="legend">
+            <p><strong>Tema:</strong> Agro forte, futuro sustentável 🍃</p>
+            <span>🐎 Cavalo | 🐖 Porco | 🐓 Galinha | 🚜 Trator</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

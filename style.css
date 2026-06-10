@@ -1,0 +1,106 @@
+:root {
+    --bg-dark: #121212;
+    --card-black: #1a1a1a;
+    --green-agro: #2e7d32;
+    --green-light: #4caf50;
+    --text-white: #ffffff;
+    --border-white: rgba(255, 255, 255, 0.8);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    width: 100%;
+    max-width: 1000px;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header { text-align: center; }
+.logo { font-size: 2rem; font-weight: 800; letter-spacing: 2px; }
+.logo span { color: var(--green-light); }
+#game-status { margin-top: 10px; color: var(--green-light); font-weight: bold; }
+
+.hand {
+    display: flex;
+    justify-content: center;
+    gap: -20px;
+    height: 160px;
+    padding: 10px;
+}
+
+/* Estilo da Carta */
+.card {
+    width: 100px;
+    height: 150px;
+    background-color: var(--card-black);
+    border: 3px solid var(--border-white);
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s, margin 0.2s;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.card:first-child { margin-left: 0; }
+.card:hover { transform: translateY(-20px); z-index: 10; margin-right: 30px; }
+
+.card.green { border-color: var(--green-agro); color: var(--green-light); }
+.card.black { border-color: var(--text-white); color: var(--text-white); }
+
+.card-icon { font-size: 2.5rem; }
+.card-value { position: absolute; top: 5px; left: 8px; font-weight: bold; font-size: 1.2rem; }
+
+.card-back {
+    width: 100px;
+    height: 150px;
+    background: repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #2e7d32 10px, #2e7d32 20px);
+    border: 3px solid white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#table-center {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+.btn {
+    background: transparent;
+    border: 2px solid var(--green-light);
+    color: var(--text-white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn:hover { background: var(--green-agro); }
+
+.legend { text-align: center; font-size: 0.9rem; color: #888; }
